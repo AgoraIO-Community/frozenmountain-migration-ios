@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66A212A91ED895880018A87D /* Signalling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A212A81ED895880018A87D /* Signalling.swift */; };
+		AF39C42FF7F214F1C369AEB0 /* Pods_Chat_WebSync4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7358DED4AF2BDE70EF427E84 /* Pods_Chat_WebSync4.framework */; };
+		D8030E241D9D831800D4FCAB /* email-icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = D8030E1D1D9D831800D4FCAB /* email-icon.gif */; };
+		D8030E251D9D831800D4FCAB /* facebook-icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = D8030E1E1D9D831800D4FCAB /* facebook-icon.gif */; };
+		D8030E261D9D831800D4FCAB /* FrozenMountain_logo_rgb.png in Resources */ = {isa = PBXBuildFile; fileRef = D8030E1F1D9D831800D4FCAB /* FrozenMountain_logo_rgb.png */; };
+		D8030E271D9D831800D4FCAB /* Icelink-logo-rgb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8030E201D9D831800D4FCAB /* Icelink-logo-rgb.jpg */; };
+		D8030E281D9D831800D4FCAB /* linkedin-icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = D8030E211D9D831800D4FCAB /* linkedin-icon.gif */; };
+		D8030E291D9D831800D4FCAB /* phone-icon-new.gif in Resources */ = {isa = PBXBuildFile; fileRef = D8030E221D9D831800D4FCAB /* phone-icon-new.gif */; };
+		D8030E2A1D9D831800D4FCAB /* twitter-icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = D8030E231D9D831800D4FCAB /* twitter-icon.gif */; };
+		D8030E341D9D878000D4FCAB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8030E331D9D878000D4FCAB /* LoginViewController.swift */; };
+		D84449331D93229D00D72774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84449321D93229D00D72774 /* AppDelegate.swift */; };
+		D84449351D93229D00D72774 /* VideoCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84449341D93229D00D72774 /* VideoCallViewController.swift */; };
+		D84449371D93229D00D72774 /* TextChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84449361D93229D00D72774 /* TextChatViewController.swift */; };
+		D844493A1D93229D00D72774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D84449381D93229D00D72774 /* Main.storyboard */; };
+		D844493C1D93229D00D72774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D844493B1D93229D00D72774 /* Assets.xcassets */; };
+		D844493F1D93229D00D72774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D844493D1D93229D00D72774 /* LaunchScreen.storyboard */; };
+		D84449841D932AF200D72774 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D84449831D932AF200D72774 /* VideoToolbox.framework */; };
+		D84449861D932AF800D72774 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D84449851D932AF800D72774 /* UIKit.framework */; };
+		D84449881D932B0400D72774 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D84449871D932B0400D72774 /* Security.framework */; };
+		D844498A1D932B2500D72774 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D84449891D932B2500D72774 /* Foundation.framework */; };
+		D844498C1D932B3A00D72774 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D844498B1D932B3A00D72774 /* CoreVideo.framework */; };
+		D844498E1D932B4200D72774 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D844498D1D932B4200D72774 /* CoreAudio.framework */; };
+		D84449901D932B4C00D72774 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D844498F1D932B4C00D72774 /* CFNetwork.framework */; };
+		D84449921D932B5200D72774 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D84449911D932B5100D72774 /* AudioToolbox.framework */; };
+		D84449B51D9348E300D72774 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84449B21D9348E300D72774 /* App.swift */; };
+		D84449B61D9348E300D72774 /* LocalMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84449B31D9348E300D72774 /* LocalMedia.swift */; };
+		D84449B71D9348E300D72774 /* RemoteMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84449B41D9348E300D72774 /* RemoteMedia.swift */; };
+		D87B04071DBFC61C00BBD401 /* ExceptionWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B04061DBFC61C00BBD401 /* ExceptionWrapper.m */; };
+		D887DD0B1DBC413500E71404 /* icelink.key in Resources */ = {isa = PBXBuildFile; fileRef = D887DD0A1DBC413500E71404 /* icelink.key */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3C88DA456A70350002F0BA41 /* Pods-Chat.WebSync4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat.WebSync4.release.xcconfig"; path = "Target Support Files/Pods-Chat.WebSync4/Pods-Chat.WebSync4.release.xcconfig"; sourceTree = "<group>"; };
+		533096A61E8AC86E00F165A5 /* FMWebSync.swift3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMWebSync.swift3.h; sourceTree = "<group>"; };
+		66A212A81ED895880018A87D /* Signalling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signalling.swift; sourceTree = "<group>"; };
+		66A212B01ED89C660018A87D /* FMWebSyncSubscribers.swift3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMWebSyncSubscribers.swift3.h; sourceTree = "<group>"; };
+		7358DED4AF2BDE70EF427E84 /* Pods_Chat_WebSync4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat_WebSync4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8030E1D1D9D831800D4FCAB /* email-icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "email-icon.gif"; sourceTree = "<group>"; };
+		D8030E1E1D9D831800D4FCAB /* facebook-icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "facebook-icon.gif"; sourceTree = "<group>"; };
+		D8030E1F1D9D831800D4FCAB /* FrozenMountain_logo_rgb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FrozenMountain_logo_rgb.png; sourceTree = "<group>"; };
+		D8030E201D9D831800D4FCAB /* Icelink-logo-rgb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Icelink-logo-rgb.jpg"; sourceTree = "<group>"; };
+		D8030E211D9D831800D4FCAB /* linkedin-icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "linkedin-icon.gif"; sourceTree = "<group>"; };
+		D8030E221D9D831800D4FCAB /* phone-icon-new.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "phone-icon-new.gif"; sourceTree = "<group>"; };
+		D8030E231D9D831800D4FCAB /* twitter-icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "twitter-icon.gif"; sourceTree = "<group>"; };
+		D8030E331D9D878000D4FCAB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D844492F1D93229D00D72774 /* Chat.WebSync4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chat.WebSync4.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D84449321D93229D00D72774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D84449341D93229D00D72774 /* VideoCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallViewController.swift; sourceTree = "<group>"; };
+		D84449361D93229D00D72774 /* TextChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextChatViewController.swift; sourceTree = "<group>"; };
+		D84449391D93229D00D72774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D844493B1D93229D00D72774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D844493E1D93229D00D72774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D84449401D93229D00D72774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D84449761D932A0E00D72774 /* ObjCBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
+		D84449831D932AF200D72774 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		D84449851D932AF800D72774 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D84449871D932B0400D72774 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D84449891D932B2500D72774 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D844498B1D932B3A00D72774 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		D844498D1D932B4200D72774 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		D844498F1D932B4C00D72774 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D84449911D932B5100D72774 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D84449B21D9348E300D72774 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		D84449B31D9348E300D72774 /* LocalMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalMedia.swift; sourceTree = "<group>"; };
+		D84449B41D9348E300D72774 /* RemoteMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteMedia.swift; sourceTree = "<group>"; };
+		D87B03FF1DBFC5FF00BBD401 /* ExceptionWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExceptionWrapper.h; sourceTree = "<group>"; };
+		D87B04061DBFC61C00BBD401 /* ExceptionWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExceptionWrapper.m; sourceTree = "<group>"; };
+		D887DD0A1DBC413500E71404 /* icelink.key */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = icelink.key; sourceTree = "<group>"; };
+		EB1E72DCDB52935A7E74A26A /* Pods-Chat.WebSync4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat.WebSync4.debug.xcconfig"; path = "Target Support Files/Pods-Chat.WebSync4/Pods-Chat.WebSync4.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D844492C1D93229D00D72774 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D84449921D932B5200D72774 /* AudioToolbox.framework in Frameworks */,
+				D84449901D932B4C00D72774 /* CFNetwork.framework in Frameworks */,
+				D844498E1D932B4200D72774 /* CoreAudio.framework in Frameworks */,
+				D844498C1D932B3A00D72774 /* CoreVideo.framework in Frameworks */,
+				D844498A1D932B2500D72774 /* Foundation.framework in Frameworks */,
+				D84449881D932B0400D72774 /* Security.framework in Frameworks */,
+				D84449861D932AF800D72774 /* UIKit.framework in Frameworks */,
+				D84449841D932AF200D72774 /* VideoToolbox.framework in Frameworks */,
+				AF39C42FF7F214F1C369AEB0 /* Pods_Chat_WebSync4.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23FB838C265C53FE1AF2162A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB1E72DCDB52935A7E74A26A /* Pods-Chat.WebSync4.debug.xcconfig */,
+				3C88DA456A70350002F0BA41 /* Pods-Chat.WebSync4.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7F914B752564694B008B31B7 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				D844496F1D93262400D72774 /* libFMIceLink.a */,
+				D84449691D93261F00D72774 /* libFMIceLinkCocoa.a */,
+				D84449631D93260B00D72774 /* libFMIceLinkOpus.a */,
+				D844495D1D93260400D72774 /* libFMIceLinkVpx.a */,
+				D84449571D9325F700D72774 /* libFMIceLinkWebSync4.a */,
+				D84449511D9325E900D72774 /* libFMIceLinkYuv.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		D8030E3B1D9DBCA100D4FCAB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D887DD0A1DBC413500E71404 /* icelink.key */,
+				D8030E1D1D9D831800D4FCAB /* email-icon.gif */,
+				D8030E1E1D9D831800D4FCAB /* facebook-icon.gif */,
+				D8030E1F1D9D831800D4FCAB /* FrozenMountain_logo_rgb.png */,
+				D8030E201D9D831800D4FCAB /* Icelink-logo-rgb.jpg */,
+				D8030E211D9D831800D4FCAB /* linkedin-icon.gif */,
+				D8030E221D9D831800D4FCAB /* phone-icon-new.gif */,
+				D8030E231D9D831800D4FCAB /* twitter-icon.gif */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D84449261D93229D00D72774 = {
+			isa = PBXGroup;
+			children = (
+				D84449A11D932B6F00D72774 /* Frameworks */,
+				D84449311D93229D00D72774 /* Chat.WebSync4 */,
+				D84449301D93229D00D72774 /* Products */,
+				7F914B752564694B008B31B7 /* Recovered References */,
+				23FB838C265C53FE1AF2162A /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		D84449301D93229D00D72774 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D844492F1D93229D00D72774 /* Chat.WebSync4.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D84449311D93229D00D72774 /* Chat.WebSync4 */ = {
+			isa = PBXGroup;
+			children = (
+				D8030E3B1D9DBCA100D4FCAB /* Resources */,
+				D84449B21D9348E300D72774 /* App.swift */,
+				D84449B31D9348E300D72774 /* LocalMedia.swift */,
+				D84449B41D9348E300D72774 /* RemoteMedia.swift */,
+				D84449821D932AC400D72774 /* Supporting Files */,
+				D84449321D93229D00D72774 /* AppDelegate.swift */,
+				D84449761D932A0E00D72774 /* ObjCBridge.h */,
+				D84449341D93229D00D72774 /* VideoCallViewController.swift */,
+				D84449361D93229D00D72774 /* TextChatViewController.swift */,
+				D84449381D93229D00D72774 /* Main.storyboard */,
+				D844493B1D93229D00D72774 /* Assets.xcassets */,
+				D844493D1D93229D00D72774 /* LaunchScreen.storyboard */,
+				D84449401D93229D00D72774 /* Info.plist */,
+				D8030E331D9D878000D4FCAB /* LoginViewController.swift */,
+				D87B03FF1DBFC5FF00BBD401 /* ExceptionWrapper.h */,
+				D87B04061DBFC61C00BBD401 /* ExceptionWrapper.m */,
+				66A212A81ED895880018A87D /* Signalling.swift */,
+			);
+			path = Chat.WebSync4;
+			sourceTree = "<group>";
+		};
+		D84449821D932AC400D72774 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66A212B01ED89C660018A87D /* FMWebSyncSubscribers.swift3.h */,
+				533096A61E8AC86E00F165A5 /* FMWebSync.swift3.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D84449A11D932B6F00D72774 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D84449911D932B5100D72774 /* AudioToolbox.framework */,
+				D844498F1D932B4C00D72774 /* CFNetwork.framework */,
+				D844498D1D932B4200D72774 /* CoreAudio.framework */,
+				D844498B1D932B3A00D72774 /* CoreVideo.framework */,
+				D84449891D932B2500D72774 /* Foundation.framework */,
+				D84449871D932B0400D72774 /* Security.framework */,
+				D84449851D932AF800D72774 /* UIKit.framework */,
+				D84449831D932AF200D72774 /* VideoToolbox.framework */,
+				7358DED4AF2BDE70EF427E84 /* Pods_Chat_WebSync4.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D844492E1D93229D00D72774 /* Chat.WebSync4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D84449431D93229D00D72774 /* Build configuration list for PBXNativeTarget "Chat.WebSync4" */;
+			buildPhases = (
+				5ED8D12B9BB137781AA01031 /* [CP] Check Pods Manifest.lock */,
+				D844492B1D93229D00D72774 /* Sources */,
+				D844492C1D93229D00D72774 /* Frameworks */,
+				D844492D1D93229D00D72774 /* Resources */,
+				1335EECFAF4365825A972628 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chat.WebSync4;
+			productName = Chat.WebSync4;
+			productReference = D844492F1D93229D00D72774 /* Chat.WebSync4.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D84449271D93229D00D72774 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Frozen Mountain Software";
+				TargetAttributes = {
+					D844492E1D93229D00D72774 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8BN6DVT59H;
+						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = D844492A1D93229D00D72774 /* Build configuration list for PBXProject "Chat.WebSync4" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = D84449261D93229D00D72774;
+			productRefGroup = D84449301D93229D00D72774 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D844492E1D93229D00D72774 /* Chat.WebSync4 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D84449511D9325E900D72774 /* libFMIceLinkYuv.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFMIceLinkYuv.a;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D84449571D9325F700D72774 /* libFMIceLinkWebSync4.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFMIceLinkWebSync4.a;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D844495D1D93260400D72774 /* libFMIceLinkVpx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFMIceLinkVpx.a;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D84449631D93260B00D72774 /* libFMIceLinkOpus.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFMIceLinkOpus.a;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D84449691D93261F00D72774 /* libFMIceLinkCocoa.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFMIceLinkCocoa.a;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D844496F1D93262400D72774 /* libFMIceLink.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFMIceLink.a;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D844492D1D93229D00D72774 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8030E241D9D831800D4FCAB /* email-icon.gif in Resources */,
+				D8030E281D9D831800D4FCAB /* linkedin-icon.gif in Resources */,
+				D8030E271D9D831800D4FCAB /* Icelink-logo-rgb.jpg in Resources */,
+				D8030E261D9D831800D4FCAB /* FrozenMountain_logo_rgb.png in Resources */,
+				D844493F1D93229D00D72774 /* LaunchScreen.storyboard in Resources */,
+				D8030E251D9D831800D4FCAB /* facebook-icon.gif in Resources */,
+				D887DD0B1DBC413500E71404 /* icelink.key in Resources */,
+				D844493C1D93229D00D72774 /* Assets.xcassets in Resources */,
+				D844493A1D93229D00D72774 /* Main.storyboard in Resources */,
+				D8030E291D9D831800D4FCAB /* phone-icon-new.gif in Resources */,
+				D8030E2A1D9D831800D4FCAB /* twitter-icon.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1335EECFAF4365825A972628 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chat.WebSync4/Pods-Chat.WebSync4-frameworks.sh",
+				"${PODS_ROOT}/AgoraRtcEngine_iOS/AgoraRtcKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AgoraRtcKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chat.WebSync4/Pods-Chat.WebSync4-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5ED8D12B9BB137781AA01031 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chat.WebSync4-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D844492B1D93229D00D72774 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8030E341D9D878000D4FCAB /* LoginViewController.swift in Sources */,
+				D84449B71D9348E300D72774 /* RemoteMedia.swift in Sources */,
+				D84449B61D9348E300D72774 /* LocalMedia.swift in Sources */,
+				D84449371D93229D00D72774 /* TextChatViewController.swift in Sources */,
+				D84449B51D9348E300D72774 /* App.swift in Sources */,
+				D87B04071DBFC61C00BBD401 /* ExceptionWrapper.m in Sources */,
+				D84449331D93229D00D72774 /* AppDelegate.swift in Sources */,
+				D84449351D93229D00D72774 /* VideoCallViewController.swift in Sources */,
+				66A212A91ED895880018A87D /* Signalling.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D84449381D93229D00D72774 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D84449391D93229D00D72774 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D844493D1D93229D00D72774 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D844493E1D93229D00D72774 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D84449411D93229D00D72774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 39VJ4JM5QG;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D84449421D93229D00D72774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 39VJ4JM5QG;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D84449441D93229D00D72774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB1E72DCDB52935A7E74A26A /* Pods-Chat.WebSync4.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8BN6DVT59H;
+				INFOPLIST_FILE = Chat.WebSync4/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Chat.WebSync4/lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fm.icelink.iOS.Swift.Chat-WebSync4";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = Chat.WebSync4/ObjCBridge.h;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		D84449451D93229D00D72774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C88DA456A70350002F0BA41 /* Pods-Chat.WebSync4.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8BN6DVT59H;
+				INFOPLIST_FILE = Chat.WebSync4/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Chat.WebSync4/lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fm.icelink.iOS.Swift.Chat-WebSync4";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = Chat.WebSync4/ObjCBridge.h;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D844492A1D93229D00D72774 /* Build configuration list for PBXProject "Chat.WebSync4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D84449411D93229D00D72774 /* Debug */,
+				D84449421D93229D00D72774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D84449431D93229D00D72774 /* Build configuration list for PBXNativeTarget "Chat.WebSync4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D84449441D93229D00D72774 /* Debug */,
+				D84449451D93229D00D72774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D84449271D93229D00D72774 /* Project object */;
+}
