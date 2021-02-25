@@ -57,11 +57,9 @@ class VideoCallViewController: UIViewController {
             toastLabel.alpha = 1.0
             toastLabel.layer.cornerRadius = 10;
             toastLabel.clipsToBounds  =  true
-            UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
-                
-                toastLabel.alpha = 0.0
-                
-                }, completion: nil)
+            UIView.animate(withDuration: 4, delay: 0.1, options: .curveEaseOut) {
+                toastLabel.alpha = .zero
+            }
         }
         
 //        _app?.onMessageReceived = FMCallback(doubleAction: self.displayMessage)
@@ -70,7 +68,7 @@ class VideoCallViewController: UIViewController {
     func exit() {
         DispatchQueue.main.async {
 //            self._app?.cleanup()
-            self.dismiss(animated: false, completion: {})
+            self.dismiss(animated: false)
         }
     }
     
@@ -145,10 +143,12 @@ class VideoCallViewController: UIViewController {
         videoCanvas.renderMode = .hidden
         agoraKit?.setupLocalVideo(videoCanvas)
         
-        agoraKit?.joinChannel(byToken: nil, channelId: (_app?._channelName)!, info:nil, uid:0) {(sid, uid, elapsed) -> Void in
+        agoraKit?.joinChannel(
+            byToken: nil, channelId: (_app?._channelName)!, info:nil, uid:0
+        ) { (sid, uid, elapsed) in
             print("successfully joined channel")
         }
-//
+
 //        // Start session
 //        _app?.startLocalMedia(container: _videoView).then(resolveFunctionBlock: { [weak self] (o: Any!) -> FMIceLinkFuture? in
 //            return (self?._app?.joinAsync())!
@@ -213,78 +213,88 @@ class VideoCallViewController: UIViewController {
     
     func showActionSheet() {
         // 1
-        let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .actionSheet)
-        
+        let optionMenu = UIAlertController(
+            title: nil, message: "Choose Option",
+            preferredStyle: .actionSheet
+        )
+
         // 2
-        
+
         let audioRecordTitle = !self.recordingAudio ? "Record Audio" : "Stop Audio Recording"
-        let recordAudioAction = UIAlertAction(title: audioRecordTitle, style: .default, handler: {
-            (alert: UIAlertAction!) -> Void in
-//            self._app?._localMedia?.toggleAudioRecording()
-            self.recordingAudio = !self.recordingAudio
+        let recordAudioAction = UIAlertAction(
+            title: audioRecordTitle, style: .default
+        ) { _ in
+    //        self._app?._localMedia?.toggleAudioRecording()
+            self.recordingAudio.toggle()
             if (self.recordingAudio) {
-                self.agoraKit?.startAudioRecording("/var/mobile/Containers/Data/audio.aac", sampleRate: 32, quality: .high)
+                self.agoraKit?.startAudioRecording(
+                    "/var/mobile/Containers/Data/audio.aac",
+                    sampleRate: 32,
+                    quality: .high
+                )
             } else {
                 self.agoraKit?.stopAudioRecording()
             }
-        })
-        
-        //Agora doesn't support recording video locally.
+        }
+
+//         Agora doesn't support recording video locally.
 //        let videoRecordTitle = !self.recordingVideo ? "Record Video" : "Stop Video Recording"
-//        let recordVideoAction = UIAlertAction(title: videoRecordTitle, style: .default, handler: {
-//            (alert: UIAlertAction!) -> Void in
+//        let recordVideoAction = UIAlertAction(
+//          title: videoRecordTitle, style: .default
+//        ) { _ in
 //            self._app?._localMedia?.toggleVideoRecording()
 //            self.recordingVideo = !self.recordingVideo
 //        })
-        
+
         let disableAudioTitle = !self.audioDisabled ? "Disable Audio" : "Enable Audio"
-        let disableAudioAction = UIAlertAction(title: disableAudioTitle, style: .default, handler: {
-            (alert: UIAlertAction!) -> Void in
+        let disableAudioAction = UIAlertAction(
+            title: disableAudioTitle, style: .default
+        ) { _ in
 //            self._app?.toggleStreamDisabled(streamType: FMIceLinkStreamType.audio)
-            self.audioDisabled = !self.audioDisabled
+            self.audioDisabled.toggle()
             if (self.audioDisabled) {
                 self.agoraKit?.disableAudio()
             } else {
                 self.agoraKit?.enableAudio()
             }
-            
-        })
-        
+        }
+
         let disableVideoTitle = !self.videoDisabled ? "Disable Video" : "Enable Video"
-        let disableVideoAction = UIAlertAction(title: disableVideoTitle, style: .default, handler: {
-            (alert: UIAlertAction!) -> Void in
+        let disableVideoAction = UIAlertAction(
+            title: disableVideoTitle, style: .default
+        ) { _ in
 //            self._app?.toggleStreamDisabled(streamType: FMIceLinkStreamType.video)
-            self.videoDisabled = !self.videoDisabled
+            self.videoDisabled.toggle()
             if (self.videoDisabled) {
                 self.agoraKit?.disableVideo()
             } else {
                 self.agoraKit?.enableVideo()
             }
-        })
+        }
 
-        
+
         let muteAudioTitle = !self.audioMute ? "Mute Audio" : "Unmute Audio"
-        let muteAudioAction = UIAlertAction(title: muteAudioTitle, style: .default, handler: {
-            (alert: UIAlertAction!) -> Void in
+        let muteAudioAction = UIAlertAction(
+            title: muteAudioTitle, style: .default
+        ) { _ in
 //            self._app?._localMedia?.setAudioMuted(!(self._app?._localMedia?.audioMuted())!)
-            self.audioMute = !self.audioMute
+            self.audioMute.toggle()
             self.agoraKit?.muteLocalAudioStream(self.audioMute)
-        })
-        
+        }
+
         let muteVideoTitle = !self.videoMute ? "Mute Video" : "Unmute Video"
-        let muteVideoAction = UIAlertAction(title: muteVideoTitle, style: .default, handler: {
-            (alert: UIAlertAction!) -> Void in
-//            self._app?._localMedia?.setVideoMuted(!(self._app?._localMedia?.videoMuted())!)
-            self.videoMute = !self.videoMute
+        let muteVideoAction = UIAlertAction(
+          title: muteVideoTitle, style: .default
+        ) { _ in
+    //        self._app?._localMedia?.setVideoMuted(!(self._app?._localMedia?.videoMuted())!)
+            self.videoMute.toggle()
             self.agoraKit?.muteLocalVideoStream(self.videoMute)
-        })
-        
+        }
+
         //
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
-            (alert: UIAlertAction!) -> Void in
-        })
-        
-        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+
+
         // 4
         optionMenu.addAction(recordAudioAction)
 //        optionMenu.addAction(recordVideoAction)
@@ -316,11 +326,10 @@ extension VideoCallViewController: AgoraRtcEngineDelegate {
     }
 
     internal func rtcEngine(_ engine: AgoraRtcEngineKit, didOfflineOfUid uid:UInt, reason:AgoraUserOfflineReason) {
-        guard let view = remoteStackView.arrangedSubviews.first(where: { (view) -> Bool in
-            return view.tag == Int(uid)
-        }) else {
-            return
+        if let view = remoteStackView.arrangedSubviews.first(
+                where: { view in view.tag == Int(uid) }
+        ) {
+            remoteStackView.removeArrangedSubview(view)
         }
-        remoteStackView.removeArrangedSubview(view)
     }
 }
